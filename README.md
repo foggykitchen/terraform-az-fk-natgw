@@ -2,7 +2,7 @@
 
 This repository contains a reusable **Terraform / OpenTofu module** and progressive examples for deploying an **Azure NAT Gateway** and attaching it to **private subnets** to provide **controlled, predictable outbound connectivity** for private workloads.
 
-It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses-2/)** and is designed as a dedicated **egress boundary layer** for Azure workloads.
+It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** and is designed as a dedicated **egress boundary layer** for Azure workloads.
 
 ---
 
