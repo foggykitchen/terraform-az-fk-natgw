@@ -22,4 +22,3 @@ output "subnet_association_ids" {
   description = "Map of subnet association resource IDs (NAT Gateway -> subnet)."
   value       = { for k, v in azurerm_subnet_nat_gateway_association.this : k => v.id }
 }
-

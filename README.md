@@ -72,7 +72,7 @@ terraform-az-fk-natgw/
 
 ## 🚀 Example Usage
 
-### Attach NAT Gateway to a private subnet
+### Attach NAT Gateway to a private subnet and create Public IP inside the module
 
 ```hcl
 module "natgw" {
@@ -82,9 +82,8 @@ module "natgw" {
   location            = "westeurope"
   resource_group_name = "fk-rg"
 
-  public_ip = {
-    name = "fk-natgw-pip"
-  }
+  create_public_ip = true
+  public_ip_name   = "fk-natgw-pip"
 
   subnet_associations = {
     private_subnet = {
@@ -95,6 +94,35 @@ module "natgw" {
   tags = {
     project = "foggykitchen"
     env     = "dev"
+  }
+}
+```
+
+### Attach NAT Gateway to an existing Public IP
+
+```hcl
+module "public_ip" {
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-public-ip.git?ref=v1.0.0"
+
+  name                = "fk-natgw-pip"
+  location            = "westeurope"
+  resource_group_name = "fk-rg"
+}
+
+module "natgw" {
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-natgw.git?ref=v1.0.0"
+
+  name                = "fk-natgw"
+  location            = "westeurope"
+  resource_group_name = "fk-rg"
+
+  create_public_ip = false
+  public_ip_id     = module.public_ip.id
+
+  subnet_associations = {
+    private_subnet = {
+      subnet_id = module.vnet.subnet_ids["fk-subnet-private"]
+    }
   }
 }
 ```
@@ -110,7 +138,6 @@ module "natgw" {
 | `public_ip_id` | ID of the NAT Gateway public IP |
 | `public_ip_address` | Public IP used for outbound SNAT |
 | `subnet_association_ids` | IDs of subnet-NATGW association resources (if any) |
-| `associated_subnet_ids` | Subnet IDs attached to the NAT Gateway |
 
 ---
 

@@ -26,6 +26,7 @@ They are part of the **[FoggyKitchen.com training ecosystem](https://foggykitche
 |--------|-------|------------|
 | 01 | **Private Subnet with NAT Gateway** | Outbound Internet access for private VMs, no public IPs, NAT Gateway attachment |
 | 02 | **Private Backend with Load Balancer and NAT Gateway** | Public LB frontend, private backend tier, outbound egress via NAT Gateway |
+| 03 | **Private Subnet with NAT Gateway and External Public IP Module** | External Public IP ownership, NAT Gateway fed by `public_ip_id`, private VM egress pattern |
 
 Each example introduces **one clear outbound connectivity concept** and can be applied
 **independently** for learning, experimentation, or reuse.
@@ -53,13 +54,14 @@ tofu apply
 Examples may be deployed independently, but the **recommended learning path** is:
 
 ```
-01 → 02
+01 → 02 → 03
 ```
 
 This mirrors real‑world Azure design:
 
 - Start with a single private subnet that needs outbound Internet access
 - Then evolve into a **public frontend + private backend tier** with NAT Gateway handling egress
+- Then separate **Public IP ownership** from the NAT Gateway itself
 
 ---
 

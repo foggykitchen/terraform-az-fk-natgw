@@ -67,4 +67,3 @@ resource "azurerm_subnet_nat_gateway_association" "this" {
   subnet_id      = each.value.subnet_id
   nat_gateway_id = azurerm_nat_gateway.this.id
 }
-

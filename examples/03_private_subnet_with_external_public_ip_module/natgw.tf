@@ -5,7 +5,8 @@ module "natgw" {
   location            = azurerm_resource_group.foggykitchen_rg.location
   resource_group_name = azurerm_resource_group.foggykitchen_rg.name
 
-  create_public_ip = true
+  create_public_ip = false
+  public_ip_id     = module.public_ip.id
 
   subnet_associations = {
     private_subnet = {
