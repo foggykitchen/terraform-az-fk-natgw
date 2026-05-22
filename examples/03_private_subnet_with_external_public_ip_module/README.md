@@ -122,7 +122,7 @@ This example also validates the module contract:
 
 ```hcl
 module "natgw" {
-  source = "github.com/foggykitchen/terraform-az-fk-natgw"
+  source = "github.com/mlinxfeld/terraform-az-fk-natgw"
 
   create_public_ip = false
   public_ip_id     = module.public_ip.id

@@ -76,7 +76,7 @@ terraform-az-fk-natgw/
 
 ```hcl
 module "natgw" {
-  source = "git::https://github.com/foggykitchen/terraform-az-fk-natgw.git?ref=v1.0.0"
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-natgw.git?ref=v1.0.0"
 
   name                = "fk-natgw"
   location            = "westeurope"
@@ -102,7 +102,7 @@ module "natgw" {
 
 ```hcl
 module "public_ip" {
-  source = "git::https://github.com/foggykitchen/terraform-az-fk-public-ip.git?ref=v1.0.0"
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-public-ip.git?ref=v1.0.0"
 
   name                = "fk-natgw-pip"
   location            = "westeurope"
@@ -110,7 +110,7 @@ module "public_ip" {
 }
 
 module "natgw" {
-  source = "git::https://github.com/foggykitchen/terraform-az-fk-natgw.git?ref=v1.0.0"
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-natgw.git?ref=v1.0.0"
 
   name                = "fk-natgw"
   location            = "westeurope"
@@ -156,14 +156,14 @@ This repository intentionally avoids abstractions that hide NAT Gateway mechanic
 
 ## 🧩 Related Modules & Training
 
-- [terraform-az-fk-public-ip](https://github.com/foggykitchen/terraform-az-fk-public-ip)  
+- [terraform-az-fk-public-ip](https://github.com/mlinxfeld/terraform-az-fk-public-ip)  
 - [terraform-az-fk-vnet](https://github.com/foggykitchen/terraform-az-fk-vnet)  
-- [terraform-az-fk-nsg](https://github.com/foggykitchen/terraform-az-fk-nsg)  
-- [terraform-az-fk-loadbalancer](https://github.com/foggykitchen/terraform-az-fk-loadbalancer)  
-- [terraform-az-fk-compute](https://github.com/foggykitchen/terraform-az-fk-compute)  
-- [terraform-az-fk-bastion](https://github.com/foggykitchen/terraform-az-fk-bastion)  
-- [terraform-az-fk-storage](https://github.com/foggykitchen/terraform-az-fk-storage)  
-- [terraform-az-fk-aks](https://github.com/foggykitchen/terraform-az-fk-aks)  
+- [terraform-az-fk-nsg](https://github.com/mlinxfeld/terraform-az-fk-nsg)  
+- [terraform-az-fk-loadbalancer](https://github.com/mlinxfeld/terraform-az-fk-loadbalancer)  
+- [terraform-az-fk-compute](https://github.com/mlinxfeld/terraform-az-fk-compute)  
+- [terraform-az-fk-bastion](https://github.com/mlinxfeld/terraform-az-fk-bastion)  
+- [terraform-az-fk-storage](https://github.com/mlinxfeld/terraform-az-fk-storage)  
+- [terraform-az-fk-aks](https://github.com/mlinxfeld/terraform-az-fk-aks)  
 
 Used across:
 
