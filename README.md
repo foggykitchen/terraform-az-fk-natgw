@@ -76,7 +76,7 @@ terraform-az-fk-natgw/
 
 ```hcl
 module "natgw" {
-  source = "git::https://github.com/mlinxfeld/terraform-az-fk-natgw.git?ref=v1.0.0"
+  source = "git::https://github.com/foggykitchen/terraform-az-fk-natgw.git?ref=v1.0.0"
 
   name                = "fk-natgw"
   location            = "westeurope"
@@ -102,7 +102,7 @@ module "natgw" {
 
 ```hcl
 module "public_ip" {
-  source = "git::https://github.com/mlinxfeld/terraform-az-fk-public-ip.git?ref=v1.0.0"
+  source = "git::https://github.com/foggykitchen/terraform-az-fk-public-ip.git?ref=v1.0.0"
 
   name                = "fk-natgw-pip"
   location            = "westeurope"
@@ -110,7 +110,7 @@ module "public_ip" {
 }
 
 module "natgw" {
-  source = "git::https://github.com/mlinxfeld/terraform-az-fk-natgw.git?ref=v1.0.0"
+  source = "git::https://github.com/foggykitchen/terraform-az-fk-natgw.git?ref=v1.0.0"
 
   name                = "fk-natgw"
   location            = "westeurope"
@@ -156,7 +156,7 @@ This repository intentionally avoids abstractions that hide NAT Gateway mechanic
 
 ## 🧩 Related Modules & Training
 
-- [terraform-az-fk-public-ip](https://github.com/mlinxfeld/terraform-az-fk-public-ip)  
+- [terraform-az-fk-public-ip](https://github.com/foggykitchen/terraform-az-fk-public-ip)  
 - [terraform-az-fk-vnet](https://github.com/foggykitchen/terraform-az-fk-vnet)  
 - [terraform-az-fk-nsg](https://github.com/foggykitchen/terraform-az-fk-nsg)  
 - [terraform-az-fk-loadbalancer](https://github.com/foggykitchen/terraform-az-fk-loadbalancer)  

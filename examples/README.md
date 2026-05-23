@@ -95,7 +95,7 @@ The goal is **clarity and correctness**, not completeness.
 
 ## 🔗 Related Modules & Training
 
-- [terraform-az-fk-natgw](https://github.com/mlinxfeld/terraform-az-fk-natgw) (this repository)  
+- [terraform-az-fk-natgw](https://github.com/foggykitchen/terraform-az-fk-natgw) (this repository)  
 - [terraform-az-fk-vnet](https://github.com/foggykitchen/terraform-az-fk-vnet)  
 - [terraform-az-fk-nsg](https://github.com/foggykitchen/terraform-az-fk-nsg)  
 - [terraform-az-fk-loadbalancer](https://github.com/foggykitchen/terraform-az-fk-loadbalancer)  
