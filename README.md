@@ -4,6 +4,8 @@ This repository contains a reusable **Terraform / OpenTofu module** and progress
 
 It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** and is designed as a dedicated **egress boundary layer** for Azure workloads.
 
+This module is also part of the **[Azure Fundamentals with Terraform/OpenTofu — Build Real-World Azure Architectures with Reusable Modules (2026 Edition)](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** course. In the training, it is used to explain predictable outbound connectivity for private subnets and how NAT Gateway differs from inbound publishing patterns such as Load Balancer.
+
 ---
 
 ## 🎯 Purpose
