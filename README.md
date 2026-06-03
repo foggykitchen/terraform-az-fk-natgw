@@ -6,6 +6,8 @@ It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.c
 
 This module is also part of the **[Azure Fundamentals with Terraform/OpenTofu — Build Real-World Azure Architectures with Reusable Modules (2026 Edition)](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** course. In the training, it is used to explain predictable outbound connectivity for private subnets and how NAT Gateway differs from inbound publishing patterns such as Load Balancer.
 
+Support expectations are documented in [SUPPORT.md](SUPPORT.md).
+
 ---
 
 ## 🎯 Purpose
